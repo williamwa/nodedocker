@@ -4,15 +4,11 @@ services:
         build:
             context: ./node_modules/nsail/runtimes/nextjs
             dockerfile: Dockerfile
-            args:
-                WWWGROUP: '${WWWGROUP}'
         image: nsail-nextjs/app
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
             - '${APP_PORT:-3000}:3000'
-        environment:
-            WWWUSER: '${WWWUSER}'
         volumes:
             - '.:/app'
         networks:
