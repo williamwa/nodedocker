@@ -4,9 +4,9 @@
         ports:
             - '${FORWARD_MEILISEARCH_PORT:-7700}:7700'
         volumes:
-            - 'sailmeilisearch:/data.ms'
+            - 'nsailmeilisearch:/data.ms'
         networks:
-            - sail
+            - nsail
         healthcheck:
             test: ["CMD", "wget", "--no-verbose", "--spider",  "http://localhost:7700/health"]
             retries: 3

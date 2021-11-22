@@ -10,9 +10,9 @@
             MYSQL_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ALLOW_EMPTY_PASSWORD: 1
         volumes:
-            - 'sailmysql:/var/lib/mysql'
+            - 'nsailmysql:/var/lib/mysql'
         networks:
-            - sail
+            - nsail
         healthcheck:
             test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
             retries: 3

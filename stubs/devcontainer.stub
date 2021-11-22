@@ -4,8 +4,8 @@
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "laravel.test",
-	"workspaceFolder": "/var/www/html",
+	"service": "app",
+	"workspaceFolder": "/app",
 	"settings": {},
 	"extensions": [
 		// "mikestead.dotenv",
@@ -14,7 +14,7 @@
 		// "onecentlin.laravel5-snippets",
 		// "onecentlin.laravel-blade"
 	],
-	"remoteUser": "sail",
+	"remoteUser": "nsail",
 	// "forwardPorts": [],
 	// "runServices": [],
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
