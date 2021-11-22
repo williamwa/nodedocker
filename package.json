@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+      "nodedocker": "./bin/sail"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/williamwa/nodedocker.git"
