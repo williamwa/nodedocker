@@ -7,10 +7,19 @@ This project is port from laravel sail for nodejs ecosystem.
 # install
 `npm i -D nsail`
 
+# a note before call the command
+When using npm executable package, you have 2 ways to run it.
+
+- by npx, so all following command became `npx nsail ...`
+- by call it directly, in this way you need put `$(npm bin)` in your PATH environment variable.
+
 # usage
 
 `nsail init`
-init a docker-compose file on current node project, it will prompt you to choose services from mysql, redis, mongo, elasticsearch, and so on.
+init a docker-compose file on current node project, it will prompt you to choose services from mysql, redis, mongodb, elasticsearch, and so on.
+
+`nsail init --with=mongo,redis`
+init a docker-compose file on current node project width selected services
 
 `nsail up -d`
 start all services.
