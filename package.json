@@ -1,0 +1,25 @@
+{
+  "name": "nodedocker",
+  "version": "0.0.1",
+  "description": "nodejs developement in docker made easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamwa/nodedocker.git"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "sail",
+    "docker-compose"
+  ],
+  "author": "William Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamwa/nodedocker/issues"
+  },
+  "homepage": "https://github.com/williamwa/nodedocker#readme"
+}
