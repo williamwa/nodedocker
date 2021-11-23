@@ -199,6 +199,18 @@ if [ $# -gt 0 ]; then
             nsail_is_not_running
         fi
 
+    # Initiate a MongoDB Shell CLI terminal session within the "mongo" container...
+    elif [ "$1" == "mongo" ]; then
+        shift 1
+
+        if [ "$EXEC" == "yes" ]; then
+            docker-compose exec \
+                mongo \
+                bash -c 'mongosh'
+        else
+            nsail_is_not_running
+        fi
+
     # Initiate a Bash shell within the application container...
     elif [ "$1" == "shell" ] || [ "$1" == "bash" ]; then
         shift 1
