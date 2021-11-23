@@ -4,6 +4,9 @@ services:
         build:
             context: ./
             dockerfile: ./node_modules/nsail/runtimes/nextjs/Dockerfile
+            args:
+                WWWUSER: '${WWWUSER}'
+                WWWGROUP: '${WWWGROUP}'
         image: nsail-nextjs/app
         extra_hosts:
             - 'host.docker.internal:host-gateway'
