@@ -40,6 +40,28 @@ export NSAIL_SHARE_SERVER_HOST=${NSAIL_SHARE_SERVER_HOST:-"localhost"}
 export NSAIL_SHARE_SERVER_PORT=${NSAIL_SHARE_SERVER_PORT:-8080}
 export NSAIL_SHARE_SUBDOMAIN=${NSAIL_SHARE_SUBDOMAIN:-""}
 
+
+# init need run before check docker-compose
+if [ $# -gt 0 ]; then
+
+    # Init docker-compose file
+    if [ "$1" == "init" ]; then
+        shift 1
+
+        node ./node_modules/nsail/src/init.js "$@"
+
+        exit 0
+
+    # publish runtime docker file
+    elif [ "$1" == "publish" ]; then
+        shift 1
+
+        node ./node_modules/nsail/src/publish.js "$@"
+
+        exit 0
+    fi
+fi
+
 # Function that outputs Sail is not running...
 function nsail_is_not_running {
     echo -e "${WHITE}Sail is not running.${NC}" >&2
