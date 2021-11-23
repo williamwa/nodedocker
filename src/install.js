@@ -2,11 +2,9 @@ var argv = require('minimist')(process.argv);
 var fs = require('fs');
 
 var services = argv['with'];
+services = services ? services.split(','): [];
 
-if(services){
-  services = services.split(',');
-  buildDockerCompose(services);
-}
+buildDockerCompose(services);
 
 function buildDockerCompose(services){
   console.log('generate services with', services);
@@ -35,19 +33,30 @@ function buildDockerCompose(services){
       template = template.replace("{{volumes}}", "");
     }
 
-    var files = services.map(function(service){
-      return './node_modules/nsail/stubs/' + service + '.stub';
-    });
-
-    fSReadFiles(files, function(err, results){
-
-      template = template.replace('{{services}}', results.join(''));
-
+    var writeFile = function(){
       fs.writeFile("docker-compose.yaml", template, (err) => {
-        if (err) console.log(err);
-        console.log("Successfully Written docker-compose.yaml file");
+          if (err) console.log(err);
+          console.log("Successfully Written docker-compose.yaml file");
+        });
+    }
+
+    if(services.length){
+
+      var files = services.map(function(service){
+        return './node_modules/nsail/stubs/' + service + '.stub';
       });
-    });
+
+      fSReadFiles(files, function(err, results){
+
+        template = template.replace('{{services}}', results.join(''));
+
+        writeFile();
+      });
+
+    }else{
+      template = template.replace('{{services}}', '');
+      writeFile();
+    }
 
   });
 }
