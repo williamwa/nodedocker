@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/williamwa/nsail/issues"
   },
-  "homepage": "https://github.com/williamwa/nsail#readme"
+  "homepage": "https://github.com/williamwa/nsail#readme",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
 }
