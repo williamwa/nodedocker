@@ -19,7 +19,7 @@ When using npm executable package, you have 2 ways to run it.
 init a docker-compose file on current node project, it will prompt you to choose services from mysql, redis, mongodb, elasticsearch, and so on.
 
 `nsail init --with=mongo,redis`
-init a docker-compose file on current node project width selected services
+init a docker-compose file on current node project with selected services
 
 `nsail up -d`
 start all services.
@@ -62,3 +62,21 @@ Initiate a root user Bash shell within the application container...
 
 `nsail share`
 Share the site with a public URL...
+
+# support services
+
+- mysql
+- mariadb
+- postgresql
+- mongodb
+- redis
+- elasticsearch
+- meilisearch
+- mailhog
+- minio
+- selenium
+
+# runtimes
+
+- node: general nodejs runtime
+- nextjs: nextjs runtime
