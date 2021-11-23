@@ -1,6 +1,6 @@
 {
   "name": "nsail",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "nodejs developement in docker made easy",
   "main": "index.js",
   "scripts": {
