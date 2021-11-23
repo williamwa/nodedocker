@@ -21,22 +21,22 @@ init a docker-compose file on current node project, it will prompt you to choose
 `nsail install --with=mongo,redis`
 init a docker-compose file on current node project with selected services
 
-`nsail up -d`
+`nsail up` or `nsail up -d`
 start all services.
 
 `nsail down`
 stop all services.
 
-`nsail npm`
+`nsail npm ...`
 Proxy NPM commands to the "npm" binary on the application container...
 
-`nsail yarn`
+`nsail yarn ...`
 Proxy YARN commands to the "yarn" binary on the application container...
 
-`nsail npx`
+`nsail npx ...`
 Proxy NPX commands to the "npx" binary on the application container...
 
-`nsail node`
+`nsail node ...`
 Proxy Node commands to the "node" binary on the application container...
 
 `nsail mysql`
@@ -49,7 +49,7 @@ Initiate a MySQL CLI terminal session within the "mariadb" container...
 Initiate a PostgreSQL CLI terminal session within the "pgsql" container...
 
 `nsail mongo`
-Initiate a MongoDB CLI terminal session within the "mongo" container...
+Initiate a MongoDB's Mongo Shell CLI terminal session within the "mongo" container...
 
 `nsail redis`
 Initiate a Redis CLI terminal session within the "redis" container...
