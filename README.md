@@ -15,10 +15,10 @@ When using npm executable package, you have 2 ways to run it.
 
 # usage
 
-`nsail init`
+`nsail install`
 init a docker-compose file on current node project, it will prompt you to choose services from mysql, redis, mongodb, elasticsearch, and so on.
 
-`nsail init --with=mongo,redis`
+`nsail install --with=mongo,redis`
 init a docker-compose file on current node project with selected services
 
 `nsail up -d`

@@ -45,10 +45,10 @@ export NSAIL_SHARE_SUBDOMAIN=${NSAIL_SHARE_SUBDOMAIN:-""}
 if [ $# -gt 0 ]; then
 
     # Init docker-compose file
-    if [ "$1" == "init" ]; then
+    if [ "$1" == "install" ]; then
         shift 1
 
-        node ./node_modules/nsail/src/init.js "$@"
+        node ./node_modules/nsail/src/install.js "$@"
 
         exit 0
 
